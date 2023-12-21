@@ -1,3 +1,0 @@
-# PlanningPoker
-
-## Sous titre
