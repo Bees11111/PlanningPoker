@@ -1,5 +1,5 @@
 import tkinter as tk
-from cartes_jouer import ChoixCartes
+from backlog import EntrerBacklog
 
 # Create the main window
 root = tk.Tk()
@@ -11,7 +11,7 @@ root.configure(bg="#008080")
 root.geometry("1100x600")
 
 # Create frames for the main menu, options menu, jouer menu, and tutorial menu
-main_menu = ChoixCartes(root)
+main_menu = EntrerBacklog(root)
 
 # Show the main menu frame initially
 main_menu.pack()

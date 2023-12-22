@@ -20,7 +20,7 @@ class AfficherCartes(tk.Frame):
 
         #Réinitialiser les cartes des joueurs
         for joueur in self.cartes_joueurs:
-            joueur.clear()
+             joueur.clear()
 
     def convertir_svg_en_image(self, fichier_svg):
         dessin = svg2rlg(fichier_svg)

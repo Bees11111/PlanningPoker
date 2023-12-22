@@ -3,11 +3,13 @@ import sys
 import tkinter as tk
 from svglib.svglib import svg2rlg
 from reportlab.graphics import renderPM
+from backlog import *
 
 class ChoixCartes(tk.Frame):
-    def __init__(self, master=None, **kwargs):
+    def __init__(self, master=None, backlog=None, **kwargs):
         super().__init__(master, bg="#008080", **kwargs)
         self.master = master
+        self.backlog = backlog if backlog is not None else []
         self.create_widgets()
 
     def create_widgets(self):
@@ -31,6 +33,9 @@ class ChoixCartes(tk.Frame):
         self.label_tour = tk.Label(self, text="Tour du joueur 1\n", font=("TimesNewRoman", 30), bg="#008080", fg="white")
         self.label_tour.pack(side="top", pady=10)
 
+        if self.tour_actuel < len(self.backlog):
+            self.afficher_texte_backlog()
+
         #Masque les avertissements relatifs à la recherche de polices
         sys.stdout = open(os.devnull, 'w')
         sys.stderr = open(os.devnull, 'w')
@@ -42,6 +47,13 @@ class ChoixCartes(tk.Frame):
                 bouton = tk.Button(self, image=image, command=lambda svg=fichier_svg: self.afficher_carte(svg))
                 bouton.image = image
                 bouton.pack(side="left", padx=5)
+    
+    def afficher_texte_backlog(self): 
+        contenu_backlog = self.backlog[self.tour_actuel]
+        texte = f"Définissez la difficulté de : {contenu_backlog} \n"
+
+        label_texte_backlog = tk.Label(self, text=texte, font=("TimesNewRoman", 16), bg="#008080", fg="white")
+        label_texte_backlog.pack(side="top", pady=10)
     
     def convertir_svg_en_image(self, fichier_svg):
         dessin = svg2rlg(fichier_svg)
@@ -67,7 +79,7 @@ class ChoixCartes(tk.Frame):
         #Si trois joueurs ont joué, afficher les cartes au centre
         if self.tour_actuel == 0:
             self.show_cartes()
-
+    
     def show_cartes(self):
         from cartes_affichage import AfficherCartes
         #Hide the main menu frame
