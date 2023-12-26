@@ -27,7 +27,7 @@ Il s'agit d'une approche collaborative permettant aux équipes d'estimer l'effor
 3. Accédez au répertoire du projet :
 
     ```bash
-    cd planning-poker
+    cd planningPoker-main
     ```
 
 4. Exécutez le programme principal :
