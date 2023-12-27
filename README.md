@@ -37,6 +37,10 @@ Il s'agit d'une approche collaborative permettant aux équipes d'estimer l'effor
     python main.py
     ```
 
+
+Si tout est deja pret et que vous utilisez une IDE permettant de directement lancer un fichier, alors naviguez vers `main.py` et lancez le code
+
+
 ## Captures d'écran
 
 ![Menu principal](screenshots/main_menu.png)
