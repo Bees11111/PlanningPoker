@@ -10,6 +10,7 @@ Il s'agit d'une approche collaborative permettant aux équipes d'estimer l'effor
 ## Fonctionnalités
 
 - Naviguez entre menus (Menu principal, Options, Jouer, Tutoriel)
+- Lancer des tests unitaires directement dans le code en lançant `TestUnitaires.py`
 - Choisir le nombre de joueurs (de 2 à 4)
 - Sélectionnez des pseudos pour chaque joueur
 - Choisir un mode de jeu (Strict, Moyenne)
