@@ -11,11 +11,12 @@ Ce document liste les exigences logicielles nécessaires pour exécuter le proje
 Les modules suivants doivent être installés dans l'environnement Python pour assurer le bon fonctionnement du projet :
 
 - `tkinter`: Bibliothèque pour l'interface graphique. Trouvable sur Anaconda sous `tk`
-- `sys`: Module système. Utilisé pour quitter des menus. Integré à Python
+- `sys`: Module native de Python. Utilisé pour quitter des menus. Integré à Python
 - `svglib`: Bibliothèque pour la manipulation des fichiers SVG. `conda install -c conda-forge svglib`
 - `reportlab`: Bibliothèque pour la création de documents. Utilisé pour les cartes. Trouvable sur Anaconda sous `reportlab`
 - `json`: Module pour la manipulation de fichiers JSON. Trouvable sur Anaconda sous `json5`
 - `pygame`: Module pour l'implémentation de la musique de fond. `pip install pygame`
+- `unittest`: Module native de Python. Utilisé pour les tests unitaires
 
 ## Installation avec terminal sans utiliser l'interface Anaconda
 
