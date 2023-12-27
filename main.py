@@ -1,21 +1,19 @@
 import tkinter as tk
-from main_menu import MainMenu
+from MainMenu import MainMenu
 
-# Cree la fenetre du menu principal
+# Crée la fenêtre du menu principal
 root = tk.Tk()
 root.title("Planning Poker")
 
-#Fond vert
+#Couleur fond vert
 root.configure(bg="#008080")
 
 # Impose une taille minimale de la fenetre
 root.minsize(800, 500)
 
-# Cree la frame pour le main menu
+# Cree la frame pour le menu principal
 main_menu = MainMenu(root)
-
-# Pack le menu
 main_menu.pack()
 
-# Lance le root
+# Lance la boucle principale du root
 root.mainloop()
