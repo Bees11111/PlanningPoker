@@ -5,7 +5,7 @@ import datetime
 
 # Fonction pour définir le style des boutons
 def button_style():
-    return {"bd": 2, "relief": tk.GROOVE, "bg": "#388E8E", "fg": "white", "height": 2, "width": 15}
+    return {"bd": 2, "relief": tk.GROOVE, "bg": "#388E8E", "fg": "white", "height": 2, "width": 20}
 
 # Classe principale pour afficher les cartes
 class AfficherCartes(tk.Frame):
@@ -109,7 +109,7 @@ class AfficherCartes(tk.Frame):
                     saveFileButton.pack(pady=20)
                     menuButton = tk.Button(self, text="Retour au menu", command=self.return_to_menu, **button_style())
                     menuButton.pack(pady=20)
-        print("save ="+str(self.savedValues))
+        #print("save ="+str(self.savedValues))
 
     def convertir_svg_en_image(self, fichier_svg):
         dessin = svg2rlg(fichier_svg)
@@ -140,10 +140,10 @@ class AfficherCartes(tk.Frame):
         for i, task in enumerate(self.backlog):
             backlogTask = {task: self.savedValues[i]}
             backlogValues.update(backlogTask)
-        print(str(backlogValues)) 
+        #print(str(backlogValues)) 
 
         nameFile = "backlog"+str(datetime.datetime.now().time()).replace(":", "").replace(".", "")
-        print("File :"+nameFile)
+        #print("File :"+nameFile)
         with open(nameFile+".json", 'x') as fichier:
             json.dump(backlogValues, fichier, indent=2)
         messagebox.showinfo("Sauvegarde", "Backlog sauvegardé avec succès.")
