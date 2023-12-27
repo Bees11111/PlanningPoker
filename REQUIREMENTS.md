@@ -15,6 +15,7 @@ Les modules suivants doivent être installés dans l'environnement Python pour a
 - `svglib`: Bibliothèque pour la manipulation des fichiers SVG. `conda install -c conda-forge svglib`
 - `reportlab`: Bibliothèque pour la création de documents. Utilisé pour les cartes. Trouvable sur Anaconda sous `reportlab`
 - `json`: Module pour la manipulation de fichiers JSON. Trouvable sur Anaconda sous `json5`
+- `pygame`: Module pour l'implémentation de la musique de fond. `conda install -c cogsci pygame`
 
 ## Installation avec terminal sans utiliser l'interface Anaconda
 
@@ -30,3 +31,4 @@ Les modules suivants doivent être installés dans l'environnement Python pour a
    `conda install -c conda-forge tk`
    `conda install -c conda-forge svglib`
    `conda install -c conda-forge reportlab`
+   `conda install -c cogsci pygame`
